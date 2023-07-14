@@ -1,0 +1,47 @@
+%burger-line {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 3px;
+  background-color: $color-hamburger;
+  border-radius: 5px;
+}
+
+.burger {
+  position: relative;
+  padding: 0;
+  display: none;
+  align-items: center;
+  width: 31px;
+  height: 25px;
+  border: none;
+  background-color: transparent;
+  @include transition-animation(transform);
+  @include media-tablet {
+    display: flex;
+    width: 27px;
+    height: 21px;
+  }
+
+  &::before {
+    @extend %burger-line;
+    content: '';
+    top: 0;
+  }
+
+  &::after {
+    @extend %burger-line;
+    content: '';
+    bottom: 0;
+  }
+
+  &--open {
+    transform: rotate(90deg);
+  }
+
+  &__line {
+    @extend %burger-line;
+    top: calc(50% - 1.5px);
+  }
+}

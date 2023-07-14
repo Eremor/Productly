@@ -1,6 +1,6 @@
 //abstracts
 @import "abstracts/constants";
-@import "abstracts/placeHolders";
+@import "abstracts/place-holders";
 @import "abstracts/mixins";
 
 //base
@@ -8,7 +8,13 @@
 @import "base/base";
 
 //layout
+@import "layout/wrapper";
+@import "layout/header";
 
 //components
+@import "components/burger";
+@import "components/logo";
+@import "components/navigation";
+@import "components/button";
 
 //blocks

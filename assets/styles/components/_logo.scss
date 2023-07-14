@@ -1,0 +1,22 @@
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__object {
+    width: 100%;
+    max-width: 191px;
+  }
+
+  &__svg {
+    cursor: pointer;
+  }
+
+  &__path {
+    fill: $color-hamburger;
+    @include transition-animation(all);
+
+    .logo__svg:hover & {
+      fill: $color-primary;
+    }
+  }
+}

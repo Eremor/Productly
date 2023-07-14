@@ -1,0 +1,95 @@
+.navigation {
+  
+  @include media-tablet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    display: none;
+    max-width: 100%;
+    height: 100vh;
+    background-color: $color-overlay;
+  }
+
+  &--open {
+    display: block;
+  }
+
+  &__list {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+
+    @include media-tablet {
+      padding-top: 80px;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 34px;
+      max-width: 340px;
+      height: 100vh;
+      background-color: $color-background;
+      box-shadow: 0px 4px 20px 0px $color-shadow-light;
+    }
+
+    @include media-mobile {
+      padding-top: 68px;
+      max-width: 317px;
+      height: 100%;
+      max-height: 340px;
+    }
+  }
+
+  &__item {
+
+    @include media-tablet {
+      padding-left: 55px;
+
+      &:first-child {
+        padding-top: 45px;
+        border-top: 1px solid #D7D7D7;
+      }
+    }
+
+    @include media-mobile {
+      padding-left: 72px;
+
+      &:first-child {
+        padding-top: 54px;
+      }
+    }
+
+    > a {
+      @extend %font-main;
+      @include font($size: 1.5rem, $height: 2.8rem);
+      color: $color-heading;
+      text-decoration: none;
+      @include transition-animation(color);
+
+      @include media-tablet {
+        @include font($size: 2.2rem, $height: 2.8rem);
+      }
+    }
+
+    &:hover > a {
+      color: $color-primary;
+    }
+  }
+
+  &__buttons {
+    display: none;
+    max-width: 317px;
+    
+    > .btn {
+      padding: 12px 27px;
+    }
+
+    @include media-mobile {
+      padding: 35px 72px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      height: 100%;
+      background-color: $color-background;
+    }
+  }
+}

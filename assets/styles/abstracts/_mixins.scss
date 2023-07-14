@@ -14,6 +14,10 @@
   }
 }
 
+@mixin transition-animation ($item) {
+  transition: $item 0.3s ease-out;
+}
+
 @mixin media-laptop {
   @media screen and (max-width: $content-width) { @content }
 }

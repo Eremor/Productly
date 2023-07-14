@@ -1,0 +1,81 @@
+.header {
+  position: relative;
+  @extend %shadow-small;
+
+  &__wrapper {
+    padding-top: 15px;
+    padding-bottom: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-tablet {
+      padding-left: 27px;
+      padding-right: 47px;
+    }
+
+    @media screen and (max-width: 525px) {
+      padding: 21px 10px;
+    }
+
+    @include media-mobile {
+      padding: 21px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 6;
+
+    @include media-tablet {
+      width: 100%;
+      max-width: 260px;
+    }
+
+    @include media-mobile {
+      max-width: 246px;
+    }
+
+    & .logo__object {   
+      @include media-tablet {
+        margin-left: 5px;
+      }
+
+      @include media-mobile {
+        width: 158px;
+      }
+    }
+  }
+
+  &__navigation {
+    margin-right: 39px;
+    margin-left: 10px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  &__buttons {
+    margin-left: 5px;
+    display: flex;
+    gap: 14px;
+
+    > .btn {
+      padding: 12px 27px;
+
+      @media screen and (max-width: 525px) {
+        padding: 7px 19px;
+      }
+    }
+
+    @include media-mobile {
+      display: none;
+    }
+  }
+}
+
+.open-navbar {
+  max-width: 210px;
+}
