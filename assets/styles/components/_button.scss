@@ -32,4 +32,26 @@
       border-color: $color-additional;
     }
   }
+
+  &--linked {
+    padding: 0;
+    border: none;
+    color: $color-primary;
+
+    &:hover {
+      color: $color-additional;
+
+      .icon {
+        @extend %icon-hover;
+      }
+    }
+  }
+}
+
+.btn-link {
+
+  &__text {
+    margin-left: 10px;
+    text-decoration: underline;
+  }
 }

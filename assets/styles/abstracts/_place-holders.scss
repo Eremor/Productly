@@ -13,3 +13,7 @@
 %shadow-large {
   box-sizing: 0px 15px 30px 0px $color-shadow ;
 }
+
+%icon-hover {
+  filter: invert(63%) sepia(33%) saturate(4357%) hue-rotate(168deg) brightness(100%) contrast(103%);
+}

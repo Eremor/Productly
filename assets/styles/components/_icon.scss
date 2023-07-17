@@ -1,0 +1,10 @@
+.icon {
+  cursor: pointer;
+  display: inline-block;
+
+  &--play {
+    width: 20px;
+    height: 18px;
+    background: url('../icons/play-icon.svg') center no-repeat;
+  }
+}
