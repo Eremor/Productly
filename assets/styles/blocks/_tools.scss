@@ -1,0 +1,165 @@
+.tools {
+  padding-bottom: 30px;
+  background: url('../icons/tools-bg.svg') bottom 30px center no-repeat;
+
+  @include media-tablet {
+    background-size: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 70px;
+    width: 100%;
+    max-width: 462px;
+    @extend %font-main;
+    @include font(3.4rem, normal, 700);
+    text-align: center;
+    color: $color-heading;
+
+    @include media-tablet {
+      margin-bottom: 51px;
+    }
+
+    @include media-mobile {
+      margin-bottom: 43px;
+      @include font(2.4rem, normal, 700);
+    }
+  }
+
+  &__grid {
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+
+    @include media-tablet {
+      margin-bottom: 54px;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 54px;
+    }
+
+    @include media-mobile {
+      margin-bottom: 38px;
+      grid-template-columns: 1fr;
+      row-gap: 47px;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 90px;
+
+    @include media-tablet {
+      margin-bottom: 53px;
+    }
+
+    @include media-mobile {
+      margin-bottom: 47px;
+    }
+  }
+}
+
+.tool {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include media-tablet {
+    align-items: center;
+  }
+
+  &__icon {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 19px;
+
+    @include media-tablet {
+      margin-bottom: 20px;
+    }
+
+    @include media-mobile {
+      margin-bottom: 8px;
+    }
+
+    &--violet {
+      background-color: $color-violet;
+    }
+
+    &--yellow {
+      background-color: $color-yellow;
+    }
+
+    &--red {
+      background-color: $color-red;
+    }
+
+    &--blue {
+      background-color: $color-blue;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+    @include font(2.2rem, normal, 600);
+    color: $color-heading;
+    white-space: nowrap;
+
+    @include media-tablet {
+      margin-bottom: 6px;
+    }
+
+    @include media-mobile {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    width: 100%;
+    max-width: 260px;
+    @include font(1.6rem, 2.6rem);
+    color: $color-text;
+
+    @include media-tablet {
+      text-align: center;
+    }
+
+    @include media-mobile {
+      max-width: 333px;
+    }
+
+    .tool:first-child & {
+      max-width: 184px;
+
+      @include media-tablet {
+        max-width: 260px;
+      }
+
+      @include media-mobile {
+        max-width: 333px;
+      }
+    }
+
+    .tool:nth-child(3) & {
+      max-width: 197px;
+
+      @include media-tablet {
+        max-width: 260px;
+      }
+
+      @include media-mobile {
+        max-width: 333px;
+      }
+    }
+  }
+}
