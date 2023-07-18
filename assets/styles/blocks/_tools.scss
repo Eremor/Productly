@@ -13,14 +13,10 @@
   }
 
   &__title {
-    margin: 0;
     margin-bottom: 70px;
     width: 100%;
     max-width: 462px;
-    @extend %font-main;
-    @include font(3.4rem, normal, 700);
     text-align: center;
-    color: $color-heading;
 
     @include media-tablet {
       margin-bottom: 51px;
@@ -28,7 +24,6 @@
 
     @include media-mobile {
       margin-bottom: 43px;
-      @include font(2.4rem, normal, 700);
     }
   }
 

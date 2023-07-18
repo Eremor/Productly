@@ -1,0 +1,11 @@
+.section-title {
+  margin: 0;
+  @extend %font-main;
+  @include font(3.4rem, normal, 700);
+  text-align: center;
+  color: $color-heading;
+
+  @include media-mobile {
+    @include font(2.4rem, normal, 700);
+  }
+}

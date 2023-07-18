@@ -1,0 +1,36 @@
+.tag {
+  margin: 0;
+  padding: 0 14px;
+  @extend %font-main;
+  @include font(1.3rem, 2.8rem);
+  color: $color-text;
+  border: none;
+  outline: none;
+  border-radius: 90px;
+  @include transition-animation(all);
+
+  &--selected {
+    color: $color-background;
+    background-color: $color-primary;
+    border-color: $color-primary;
+    cursor: default;
+  }
+
+  &--bordered {
+    background-color: transparent;
+    border: 1px solid $color-border-line;
+
+    &:hover {
+      color: $color-background;
+      background-color: $color-additional;
+      border-color: $color-additional;
+    }
+  }
+
+  &--colored {
+    display: inline-block;
+    background-color: $color-tag;
+    border-color: $color-tag;
+    cursor: default;
+  }
+}
