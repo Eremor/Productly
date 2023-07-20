@@ -1,0 +1,64 @@
+.employee {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  width: 377px;
+
+  @include media-mobile {
+    width: 333px;
+  }
+
+  &__content {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 345px;
+    background-color: $color-background;
+    border-radius: 10px;
+    @extend %shadow-small;
+
+    @include media-mobile {
+      width: 301px;
+    }
+  }
+
+  &__name {
+    margin: 0;
+    @include font(1.6rem, 2.6rem, 700);
+    color: $color-text;
+  }
+
+  &__position {
+    margin: 0;
+    @include font(1.4rem, 2.6rem);
+    color: $color-text;
+  }
+
+  &__contact {
+    margin: 0;
+    @include font(1.4rem, 2.6rem);
+    color: $color-link;
+    text-decoration: none;
+  }
+
+  &__image {
+    position: absolute;
+    // right: -45px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

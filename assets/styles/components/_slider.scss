@@ -1,0 +1,55 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+    margin-bottom: 30px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 33px;
+    @include transition-animation(left);
+
+    @include media-mobile {
+      margin-bottom: 27px;
+      gap: 45px;
+    }
+  }
+
+  &__controller {
+    display: none;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 36px;
+
+    @include media-tablet {
+      display: flex;
+    }
+  }
+}
+
+.controller {
+
+  &__item {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    border: 1px solid $color-heading;
+    border-radius: 50%;
+    cursor: pointer;
+
+    input:checked + & {
+      background-color: $color-heading;
+    }
+  }
+}
+
+input {
+  display: none;
+}
