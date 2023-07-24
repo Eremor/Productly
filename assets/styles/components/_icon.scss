@@ -33,4 +33,18 @@
     height: 18px;
     background: url('../icons/clock-icon.svg') center no-repeat;
   }
+
+  &--phone {
+    width: 9px;
+    height: 10px;
+    background: url('../icons/phone.svg') center no-repeat;
+    @extend %icon-contact;
+  }
+
+  &--email {
+    width: 9px;
+    height: 10px;
+    background: url('../icons/email.svg') center no-repeat;
+    @extend %icon-contact;
+  }
 }

@@ -6,3 +6,4 @@
 - tools - 50 минут
 - strategies - 1час 40 минут
 - about-us - 1 час 20 минут
+- contact - 10 минут
