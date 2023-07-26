@@ -2,19 +2,17 @@ export class Strategy {
   node = document.createElement('article');
 
   constructor(data) {
-    this.img = data.img;
-    this.title = data.title;
-    this.desc = data.desc;
-    this.tags = data.tags;
-    this.className = data.class;
+    this.data = data;
   }
 
   create = (parentNode) => {
-    this.className.forEach((item) => this.node.classList.add(item))
+    const { img, title, tags, className } = this.data;
+
+    className.forEach((item) => this.node.classList.add(item))
 
     const imageEl = document.createElement('img');
-    imageEl.src = this.img.src;
-    imageEl.alt = this.img.alt;
+    imageEl.src = img.src;
+    imageEl.alt = img.alt;
 
     const imageContainer = document.createElement('div');
     imageContainer.classList.add('strategy__image');
@@ -22,12 +20,12 @@ export class Strategy {
 
     const titleEl = document.createElement('h3');
     titleEl.classList.add('strategy__title');
-    titleEl.textContent = this.title;
+    titleEl.textContent = title;
 
     const tagsContainer = document.createElement('div');
     tagsContainer.classList.add('strategy__tags');
 
-    this.tags.forEach(itemText => {
+    tags.forEach(itemText => {
       const elem = document.createElement('span');
       elem.classList.add('tag', 'tag--colored');
       elem.textContent = itemText;
