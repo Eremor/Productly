@@ -1,3 +1,5 @@
+import { Modal } from './modal.js';
+
 export class Strategy {
   node = document.createElement('article');
 
@@ -39,5 +41,16 @@ export class Strategy {
 
     this.node.append(imageContainer, contentContainer);
     parentNode.append(this.node);
+
+    this.node.addEventListener('click', this.handleModal);
+  }
+
+  handleModal = (e) => {
+    const { currentTarget } = e;
+
+    if (currentTarget.classList.contains('strategy')) {
+      const modal = new Modal(this.data);
+      modal.create();
+    }
   }
 }

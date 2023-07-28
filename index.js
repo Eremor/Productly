@@ -82,4 +82,6 @@ const handleStrategyTags = (e) => {
   }
 };
 
+generateStrategies('All');
+
 tagsButtonContainer.addEventListener('click', handleStrategyTags);
